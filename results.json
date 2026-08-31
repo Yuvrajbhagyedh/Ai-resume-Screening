@@ -1,0 +1,1140 @@
+{
+  "generated_at": "2026-08-31T17:51:25",
+  "input_dir": "resumes",
+  "total_files_discovered": 10,
+  "eligible_count": 4,
+  "ineligible_count": 4,
+  "failed_count": 2,
+  "ranked": [
+    {
+      "source_file": "01_strong_rag_engineer.pdf",
+      "candidate": {
+        "name": "Aditi Sharma",
+        "email": "aditi.sharma@example.com",
+        "github_url": "https://github.com/aditisharma-dev",
+        "skills": [
+          "aws",
+          "ci/cd",
+          "django",
+          "docker",
+          "fastapi",
+          "fine tuned",
+          "function calling",
+          "langchain",
+          "multi agent",
+          "multi-agent",
+          "pinecone",
+          "postgresql",
+          "python",
+          "pytorch",
+          "redis",
+          "retrieval augmented generation",
+          "retrieval-augmented",
+          "retrieval-augmented generation",
+          "tool calling",
+          "vector database"
+        ],
+        "projects": [
+          {
+            "name": "Enterprise RAG Assistant",
+            "description": "Python, LangChain, FastAPI Built a production retrieval augmented generation pipeline using LangChain and a Pinecone vector database over 50k internal documents. Fine-tuned embeddings, added evaluation scripts, deployed on AWS with Docker. Exposed the system via a FastAPI backend with unit tests and CI/CD.",
+            "technologies": [
+              "aws",
+              "ci/cd",
+              "docker",
+              "fastapi",
+              "fine tuned",
+              "langchain",
+              "pinecone",
+              "python",
+              "retrieval augmented generation",
+              "retrieval-augmented",
+              "retrieval-augmented generation",
+              "vector database"
+            ],
+            "evidence": [
+              {
+                "category": "python",
+                "term": "python",
+                "snippet": "Enterprise RAG Assistant | Python, LangChain, FastAPI",
+                "source": "resume_text"
+              },
+              {
+                "category": "python",
+                "term": "fastapi",
+                "snippet": "Enterprise RAG Assistant | Python, LangChain, FastAPI",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "langchain",
+                "snippet": "Enterprise RAG Assistant | Python, LangChain, FastAPI",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "retrieval-augmented generation",
+                "snippet": "- Built a production retrieval augmented generation pipeline using LangChain",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "retrieval augmented generation",
+                "snippet": "- Built a production retrieval augmented generation pipeline using LangChain",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "retrieval-augmented",
+                "snippet": "- Built a production retrieval augmented generation pipeline using LangChain",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "pinecone",
+                "snippet": "and a Pinecone vector database over 50k internal documents.",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "vector database",
+                "snippet": "and a Pinecone vector database over 50k internal documents.",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "fine tuned",
+                "snippet": "- Fine-tuned embeddings, added evaluation scripts, deployed on AWS with Docker.",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "rag",
+                "snippet": "Enterprise RAG Assistant | Python, LangChain, FastAPI",
+                "source": "resume_text"
+              }
+            ]
+          },
+          {
+            "name": "Autonomous Research Agent",
+            "description": "Python, OpenAI API Designed a multi-agent workflow with tool calling and function calling to autonomously summarize research papers.",
+            "technologies": [
+              "function calling",
+              "multi agent",
+              "multi-agent",
+              "python",
+              "tool calling"
+            ],
+            "evidence": [
+              {
+                "category": "python",
+                "term": "python",
+                "snippet": "Autonomous Research Agent | Python, OpenAI API",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "tool calling",
+                "snippet": "- Designed a multi-agent workflow with tool calling and function calling",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "multi agent",
+                "snippet": "- Designed a multi-agent workflow with tool calling and function calling",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "function calling",
+                "snippet": "- Designed a multi-agent workflow with tool calling and function calling",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "multi-agent",
+                "snippet": "- Designed a multi-agent workflow with tool calling and function calling",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "agent",
+                "snippet": "Autonomous Research Agent | Python, OpenAI API",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "openai api",
+                "snippet": "Autonomous Research Agent | Python, OpenAI API",
+                "source": "resume_text"
+              }
+            ]
+          }
+        ],
+        "raw_text_length": 755
+      },
+      "integrity": {
+        "flags": [],
+        "suspicious_span_count": 0,
+        "total_span_count": 17,
+        "details": [],
+        "is_clean": true
+      },
+      "eligibility": {
+        "eligible": true,
+        "python_evidence": [
+          {
+            "category": "python",
+            "term": "python",
+            "snippet": "Python, FastAPI, LangChain, PyTorch, Docker, AWS, PostgreSQL",
+            "source": "resume_text"
+          },
+          {
+            "category": "python",
+            "term": "fastapi",
+            "snippet": "Python, FastAPI, LangChain, PyTorch, Docker, AWS, PostgreSQL",
+            "source": "resume_text"
+          },
+          {
+            "category": "python",
+            "term": "pytorch",
+            "snippet": "Python, FastAPI, LangChain, PyTorch, Docker, AWS, PostgreSQL",
+            "source": "resume_text"
+          },
+          {
+            "category": "python",
+            "term": "django",
+            "snippet": "- Built REST APIs in Python (Django) backed by PostgreSQL and Redis.",
+            "source": "resume_text"
+          }
+        ],
+        "ai_evidence": [
+          {
+            "category": "ai",
+            "term": "langchain",
+            "snippet": "Python, FastAPI, LangChain, PyTorch, Docker, AWS, PostgreSQL",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "retrieval-augmented generation",
+            "snippet": "- Built a production retrieval augmented generation pipeline using LangChain",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "retrieval augmented generation",
+            "snippet": "- Built a production retrieval augmented generation pipeline using LangChain",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "retrieval-augmented",
+            "snippet": "- Built a production retrieval augmented generation pipeline using LangChain",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "pinecone",
+            "snippet": "and a Pinecone vector database over 50k internal documents.",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "vector database",
+            "snippet": "and a Pinecone vector database over 50k internal documents.",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "fine tuned",
+            "snippet": "- Fine-tuned embeddings, added evaluation scripts, deployed on AWS with Docker.",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "tool calling",
+            "snippet": "- Designed a multi-agent workflow with tool calling and function calling",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "multi agent",
+            "snippet": "- Designed a multi-agent workflow with tool calling and function calling",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "function calling",
+            "snippet": "- Designed a multi-agent workflow with tool calling and function calling",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "multi-agent",
+            "snippet": "- Designed a multi-agent workflow with tool calling and function calling",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "rag",
+            "snippet": "Enterprise RAG Assistant | Python, LangChain, FastAPI",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "agent",
+            "snippet": "Autonomous Research Agent | Python, OpenAI API",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "openai api",
+            "snippet": "Autonomous Research Agent | Python, OpenAI API",
+            "source": "resume_text"
+          }
+        ],
+        "rejection_reasons": []
+      },
+      "github": {
+        "status": "ok",
+        "username": "aditisharma-dev",
+        "public_repos": 0,
+        "followers": 0,
+        "account_created_at": "2025-11-12T14:40:56Z",
+        "top_repos": [],
+        "error_message": null
+      },
+      "score": {
+        "ai_agentic_rag_depth": 40.0,
+        "python_backend_engineering": 30.0,
+        "cloud_deployment_fullstack": 8.0,
+        "github_activity": 0.0,
+        "engineering_depth": 2.0,
+        "penalties": [],
+        "evidence": [
+          "AI depth: strong term 'langchain'",
+          "AI depth: strong term 'retrieval-augmented generation'",
+          "AI depth: strong term 'retrieval augmented generation'",
+          "AI depth: strong term 'retrieval-augmented'",
+          "AI depth: strong term 'pinecone'",
+          "AI depth: strong term 'vector database'",
+          "AI depth: strong term 'fine tuned'",
+          "AI depth: strong term 'tool calling'",
+          "AI depth: strong term 'multi agent'",
+          "AI depth: strong term 'function calling'",
+          "AI depth: strong term 'multi-agent'",
+          "AI depth: contextual term 'rag'",
+          "AI depth: contextual term 'agent'",
+          "AI depth: contextual term 'openai api'",
+          "AI depth: +5 bonus for AI technology named within a Projects entry",
+          "Python: 'python'",
+          "Python: 'fastapi'",
+          "Python: 'pytorch'",
+          "Python: 'django'",
+          "Backend engineering: 'postgresql'",
+          "Backend engineering: 'ci/cd'",
+          "Backend engineering: 'redis'",
+          "Cloud/deployment: 'docker'",
+          "Cloud/deployment: 'aws'",
+          "GitHub activity: 0 public repos -> 0 pts",
+          "Engineering depth: 'docker'",
+          "Engineering depth: 'ci/cd'"
+        ],
+        "subtotal": 80.0,
+        "penalty_total": 0.0,
+        "total": 80.0
+      },
+      "rank": 1,
+      "scoring_error": null
+    },
+    {
+      "source_file": "04_js_react_but_eligible.pdf",
+      "candidate": {
+        "name": "Kevin Wu",
+        "email": "kevin.wu@example.com",
+        "github_url": "https://github.com/kevinwu",
+        "skills": [
+          "aws",
+          "ci/cd",
+          "docker",
+          "fastapi",
+          "github actions",
+          "javascript",
+          "next.js",
+          "python",
+          "rag pipeline",
+          "react",
+          "semantic search",
+          "typescript",
+          "vector database",
+          "vercel"
+        ],
+        "projects": [
+          {
+            "name": "Full-Stack RAG Search Platform",
+            "description": "Next.js, Python, FastAPI Built a Next.js frontend backed by a Python FastAPI service implementing a RAG pipeline with a vector database for semantic search. Deployed on Vercel and AWS with Docker and CI/CD via GitHub Actions.",
+            "technologies": [
+              "aws",
+              "ci/cd",
+              "docker",
+              "fastapi",
+              "github actions",
+              "next.js",
+              "python",
+              "rag pipeline",
+              "semantic search",
+              "vector database",
+              "vercel"
+            ],
+            "evidence": [
+              {
+                "category": "python",
+                "term": "python",
+                "snippet": "Full-Stack RAG Search Platform | Next.js, Python, FastAPI",
+                "source": "resume_text"
+              },
+              {
+                "category": "python",
+                "term": "fastapi",
+                "snippet": "Full-Stack RAG Search Platform | Next.js, Python, FastAPI",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "semantic search",
+                "snippet": "a RAG pipeline with a vector database for semantic search.",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "vector database",
+                "snippet": "a RAG pipeline with a vector database for semantic search.",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "rag pipeline",
+                "snippet": "a RAG pipeline with a vector database for semantic search.",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "rag",
+                "snippet": "a RAG pipeline with a vector database for semantic search.",
+                "source": "resume_text"
+              }
+            ]
+          }
+        ],
+        "raw_text_length": 385
+      },
+      "integrity": {
+        "flags": [],
+        "suspicious_span_count": 0,
+        "total_span_count": 10,
+        "details": [],
+        "is_clean": true
+      },
+      "eligibility": {
+        "eligible": true,
+        "python_evidence": [
+          {
+            "category": "python",
+            "term": "python",
+            "snippet": "JavaScript, TypeScript, React, Next.js, Python, FastAPI",
+            "source": "resume_text"
+          },
+          {
+            "category": "python",
+            "term": "fastapi",
+            "snippet": "JavaScript, TypeScript, React, Next.js, Python, FastAPI",
+            "source": "resume_text"
+          }
+        ],
+        "ai_evidence": [
+          {
+            "category": "ai",
+            "term": "semantic search",
+            "snippet": "a RAG pipeline with a vector database for semantic search.",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "vector database",
+            "snippet": "a RAG pipeline with a vector database for semantic search.",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "rag pipeline",
+            "snippet": "a RAG pipeline with a vector database for semantic search.",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "rag",
+            "snippet": "a RAG pipeline with a vector database for semantic search.",
+            "source": "resume_text"
+          }
+        ],
+        "rejection_reasons": []
+      },
+      "github": {
+        "status": "ok",
+        "username": "kevinwu",
+        "public_repos": 6,
+        "followers": 4,
+        "account_created_at": "2014-06-08T17:06:29Z",
+        "top_repos": [
+          {
+            "name": "carbon-emission-trading-exchange-on-blockchain",
+            "stars": 1,
+            "language": null,
+            "description": "This program implements a simple carbon emission trading exchange platform on Ethereum Blockchain.",
+            "fork": false
+          },
+          {
+            "name": "ar-tower-defense",
+            "stars": 1,
+            "language": "C++",
+            "description": "Augmented Reality Tower Defense Game for the Summer 2016 TUM AR Class Final Project",
+            "fork": false
+          },
+          {
+            "name": "rochester-spring-savings",
+            "stars": 0,
+            "language": "TypeScript",
+            "description": null,
+            "fork": false
+          },
+          {
+            "name": "cv-marker-tracker",
+            "stars": 0,
+            "language": "C++",
+            "description": "Tracks square markers, identifies them and calculates projections",
+            "fork": false
+          },
+          {
+            "name": "TUM-HBP-Mouse-AR",
+            "stars": 0,
+            "language": "JavaScript",
+            "description": "Mouse Experiment Visualisation with Augmented Reality for the TUM HBP Platform",
+            "fork": false
+          }
+        ],
+        "error_message": null
+      },
+      "score": {
+        "ai_agentic_rag_depth": 34.0,
+        "python_backend_engineering": 15.0,
+        "cloud_deployment_fullstack": 15.0,
+        "github_activity": 6.0,
+        "engineering_depth": 2.0,
+        "penalties": [],
+        "evidence": [
+          "AI depth: strong term 'semantic search'",
+          "AI depth: strong term 'vector database'",
+          "AI depth: strong term 'rag pipeline'",
+          "AI depth: contextual term 'rag'",
+          "AI depth: +5 bonus for AI technology named within a Projects entry",
+          "Python: 'python'",
+          "Python: 'fastapi'",
+          "Backend engineering: 'ci/cd'",
+          "Cloud/deployment: 'github actions'",
+          "Cloud/deployment: 'vercel'",
+          "Cloud/deployment: 'docker'",
+          "Cloud/deployment: 'aws'",
+          "Full-stack: 'react'",
+          "Full-stack: 'next.js'",
+          "GitHub activity: 6 public repos -> 6 pts",
+          "Engineering depth: 'ci/cd'",
+          "Engineering depth: 'docker'"
+        ],
+        "subtotal": 72.0,
+        "penalty_total": 0.0,
+        "total": 72.0
+      },
+      "rank": 2,
+      "scoring_error": null
+    },
+    {
+      "source_file": "03_tutorial_clone.pdf",
+      "candidate": {
+        "name": "Priya Nair",
+        "email": "priya.nair@example.com",
+        "github_url": "https://github.com/priyanair",
+        "skills": [
+          "flask",
+          "langchain",
+          "llm",
+          "python"
+        ],
+        "projects": [
+          {
+            "name": "LLM Chatbot Clone",
+            "description": "Followed a Udemy tutorial course project to build an LLM chatbot with LangChain and the OpenAI API.",
+            "technologies": [
+              "langchain",
+              "llm"
+            ],
+            "evidence": [
+              {
+                "category": "ai",
+                "term": "llm",
+                "snippet": "LLM Chatbot Clone",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "langchain",
+                "snippet": "with LangChain and the OpenAI API.",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "chatbot",
+                "snippet": "LLM Chatbot Clone",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "openai api",
+                "snippet": "with LangChain and the OpenAI API.",
+                "source": "resume_text"
+              }
+            ]
+          }
+        ],
+        "raw_text_length": 217
+      },
+      "integrity": {
+        "flags": [],
+        "suspicious_span_count": 0,
+        "total_span_count": 9,
+        "details": [],
+        "is_clean": true
+      },
+      "eligibility": {
+        "eligible": true,
+        "python_evidence": [
+          {
+            "category": "python",
+            "term": "python",
+            "snippet": "Python, LangChain, Flask",
+            "source": "resume_text"
+          },
+          {
+            "category": "python",
+            "term": "flask",
+            "snippet": "Python, LangChain, Flask",
+            "source": "resume_text"
+          }
+        ],
+        "ai_evidence": [
+          {
+            "category": "ai",
+            "term": "langchain",
+            "snippet": "Python, LangChain, Flask",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "llm",
+            "snippet": "LLM Chatbot Clone",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "chatbot",
+            "snippet": "LLM Chatbot Clone",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "openai api",
+            "snippet": "with LangChain and the OpenAI API.",
+            "source": "resume_text"
+          }
+        ],
+        "rejection_reasons": []
+      },
+      "github": {
+        "status": "ok",
+        "username": "priyanair",
+        "public_repos": 0,
+        "followers": 0,
+        "account_created_at": "2013-04-25T11:12:11Z",
+        "top_repos": [],
+        "error_message": null
+      },
+      "score": {
+        "ai_agentic_rag_depth": 31.0,
+        "python_backend_engineering": 12.0,
+        "cloud_deployment_fullstack": 0.0,
+        "github_activity": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": [
+          {
+            "reason": "Tutorial-style project penalty: resume text matches 3 tutorial/bootcamp/clone-style term(s) (tutorial, udemy, course project).",
+            "points": -10.0
+          }
+        ],
+        "evidence": [
+          "AI depth: strong term 'langchain'",
+          "AI depth: strong term 'llm'",
+          "AI depth: contextual term 'chatbot'",
+          "AI depth: contextual term 'openai api'",
+          "AI depth: +5 bonus for AI technology named within a Projects entry",
+          "Python: 'python'",
+          "Python: 'flask'",
+          "GitHub activity: 0 public repos -> 0 pts"
+        ],
+        "subtotal": 43.0,
+        "penalty_total": -10.0,
+        "total": 33.0
+      },
+      "rank": 3,
+      "scoring_error": null
+    },
+    {
+      "source_file": "02_thin_llm_wrapper.pdf",
+      "candidate": {
+        "name": "Rahul Verma",
+        "email": "rahul.verma@example.com",
+        "github_url": null,
+        "skills": [
+          "css",
+          "html",
+          "python"
+        ],
+        "projects": [
+          {
+            "name": "AI Chat App",
+            "description": "Used the OpenAI API to build a simple AI chat app.",
+            "technologies": [],
+            "evidence": [
+              {
+                "category": "ai",
+                "term": "openai api",
+                "snippet": "- Used the OpenAI API to build a simple AI chat app.",
+                "source": "resume_text"
+              }
+            ]
+          }
+        ],
+        "raw_text_length": 134
+      },
+      "integrity": {
+        "flags": [],
+        "suspicious_span_count": 0,
+        "total_span_count": 7,
+        "details": [],
+        "is_clean": true
+      },
+      "eligibility": {
+        "eligible": true,
+        "python_evidence": [
+          {
+            "category": "python",
+            "term": "python",
+            "snippet": "Python, HTML, CSS",
+            "source": "resume_text"
+          }
+        ],
+        "ai_evidence": [
+          {
+            "category": "ai",
+            "term": "openai api",
+            "snippet": "- Used the OpenAI API to build a simple AI chat app.",
+            "source": "resume_text"
+          }
+        ],
+        "rejection_reasons": []
+      },
+      "github": {
+        "status": "no_url",
+        "username": null,
+        "public_repos": null,
+        "followers": null,
+        "account_created_at": null,
+        "top_repos": [],
+        "error_message": null
+      },
+      "score": {
+        "ai_agentic_rag_depth": 5.0,
+        "python_backend_engineering": 6.0,
+        "cloud_deployment_fullstack": 0.0,
+        "github_activity": 0.0,
+        "engineering_depth": 0.0,
+        "penalties": [
+          {
+            "reason": "Thin LLM-wrapper penalty: minimal AI evidence with only one supporting engineering signal near that mention.",
+            "points": -8.0
+          }
+        ],
+        "evidence": [
+          "AI depth: contextual term 'openai api'",
+          "Python: 'python'",
+          "GitHub activity: unavailable (status=no_url)"
+        ],
+        "subtotal": 11.0,
+        "penalty_total": -8.0,
+        "total": 3.0
+      },
+      "rank": 4,
+      "scoring_error": null
+    }
+  ],
+  "ineligible": [
+    {
+      "source_file": "05_no_python.pdf",
+      "candidate": {
+        "name": "Sara Ali",
+        "email": "sara.ali@example.com",
+        "github_url": null,
+        "skills": [
+          "autonomous agent",
+          "java",
+          "llm",
+          "next.js",
+          "react",
+          "spring boot",
+          "tool calling"
+        ],
+        "projects": [
+          {
+            "name": "Agentic Support Bot",
+            "description": "Java, LangChain4j Built an autonomous agent with RAG and LLM tool calling in Java.",
+            "technologies": [
+              "autonomous agent",
+              "java",
+              "llm",
+              "tool calling"
+            ],
+            "evidence": [
+              {
+                "category": "ai",
+                "term": "tool calling",
+                "snippet": "- Built an autonomous agent with RAG and LLM tool calling in Java.",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "llm",
+                "snippet": "- Built an autonomous agent with RAG and LLM tool calling in Java.",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "autonomous agent",
+                "snippet": "- Built an autonomous agent with RAG and LLM tool calling in Java.",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "rag",
+                "snippet": "- Built an autonomous agent with RAG and LLM tool calling in Java.",
+                "source": "resume_text"
+              },
+              {
+                "category": "ai",
+                "term": "agent",
+                "snippet": "- Built an autonomous agent with RAG and LLM tool calling in Java.",
+                "source": "resume_text"
+              }
+            ]
+          }
+        ],
+        "raw_text_length": 186
+      },
+      "integrity": {
+        "flags": [],
+        "suspicious_span_count": 0,
+        "total_span_count": 7,
+        "details": [],
+        "is_clean": true
+      },
+      "eligibility": {
+        "eligible": false,
+        "python_evidence": [],
+        "ai_evidence": [
+          {
+            "category": "ai",
+            "term": "tool calling",
+            "snippet": "- Built an autonomous agent with RAG and LLM tool calling in Java.",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "llm",
+            "snippet": "- Built an autonomous agent with RAG and LLM tool calling in Java.",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "autonomous agent",
+            "snippet": "- Built an autonomous agent with RAG and LLM tool calling in Java.",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "rag",
+            "snippet": "- Built an autonomous agent with RAG and LLM tool calling in Java.",
+            "source": "resume_text"
+          },
+          {
+            "category": "ai",
+            "term": "agent",
+            "snippet": "- Built an autonomous agent with RAG and LLM tool calling in Java.",
+            "source": "resume_text"
+          }
+        ],
+        "rejection_reasons": [
+          "No genuine Python evidence found (no mention of Python, or a Python-specific framework/library such as Django, FastAPI, pandas)."
+        ]
+      },
+      "github": {
+        "status": "no_url",
+        "username": null,
+        "public_repos": null,
+        "followers": null,
+        "account_created_at": null,
+        "top_repos": [],
+        "error_message": null
+      },
+      "score": null,
+      "rank": null,
+      "scoring_error": null
+    },
+    {
+      "source_file": "06_no_ai.pdf",
+      "candidate": {
+        "name": "Tom Becker",
+        "email": "tom.becker@example.com",
+        "github_url": null,
+        "skills": [
+          "aws",
+          "django",
+          "docker",
+          "postgresql",
+          "python",
+          "rest api"
+        ],
+        "projects": [
+          {
+            "name": "E-commerce Backend",
+            "description": "Python, Django Built a REST API backend for an e-commerce platform with PostgreSQL and deployed it on AWS with Docker.",
+            "technologies": [
+              "aws",
+              "django",
+              "docker",
+              "postgresql",
+              "python",
+              "rest api"
+            ],
+            "evidence": [
+              {
+                "category": "python",
+                "term": "python",
+                "snippet": "E-commerce Backend | Python, Django",
+                "source": "resume_text"
+              },
+              {
+                "category": "python",
+                "term": "django",
+                "snippet": "E-commerce Backend | Python, Django",
+                "source": "resume_text"
+              }
+            ]
+          }
+        ],
+        "raw_text_length": 233
+      },
+      "integrity": {
+        "flags": [],
+        "suspicious_span_count": 0,
+        "total_span_count": 8,
+        "details": [],
+        "is_clean": true
+      },
+      "eligibility": {
+        "eligible": false,
+        "python_evidence": [
+          {
+            "category": "python",
+            "term": "python",
+            "snippet": "Python, Django, PostgreSQL, Docker, AWS",
+            "source": "resume_text"
+          },
+          {
+            "category": "python",
+            "term": "django",
+            "snippet": "Python, Django, PostgreSQL, Docker, AWS",
+            "source": "resume_text"
+          }
+        ],
+        "ai_evidence": [],
+        "rejection_reasons": [
+          "No meaningful AI/LLM/RAG/agentic evidence found -- generic words like 'AI' or 'machine learning' alone don't qualify; a specific technology or implementation (LLM, RAG, agent, LangChain, vector database, fine-tuning, etc.) is required."
+        ]
+      },
+      "github": {
+        "status": "no_url",
+        "username": null,
+        "public_repos": null,
+        "followers": null,
+        "account_created_at": null,
+        "top_repos": [],
+        "error_message": null
+      },
+      "score": null,
+      "rank": null,
+      "scoring_error": null
+    },
+    {
+      "source_file": "07_generic_ai_buzzwords_only.pdf",
+      "candidate": {
+        "name": "Meera Iyer",
+        "email": "meera.iyer@example.com",
+        "github_url": null,
+        "skills": [
+          "artificial intelligence",
+          "deep learning",
+          "machine learning",
+          "python",
+          "Summary"
+        ],
+        "projects": [],
+        "raw_text_length": 194
+      },
+      "integrity": {
+        "flags": [],
+        "suspicious_span_count": 0,
+        "total_span_count": 6,
+        "details": [],
+        "is_clean": true
+      },
+      "eligibility": {
+        "eligible": false,
+        "python_evidence": [
+          {
+            "category": "python",
+            "term": "python",
+            "snippet": "Python, Machine Learning, Artificial Intelligence, Deep Learning",
+            "source": "resume_text"
+          }
+        ],
+        "ai_evidence": [],
+        "rejection_reasons": [
+          "No meaningful AI/LLM/RAG/agentic evidence found -- generic words like 'AI' or 'machine learning' alone don't qualify; a specific technology or implementation (LLM, RAG, agent, LangChain, vector database, fine-tuning, etc.) is required."
+        ]
+      },
+      "github": {
+        "status": "no_url",
+        "username": null,
+        "public_repos": null,
+        "followers": null,
+        "account_created_at": null,
+        "top_repos": [],
+        "error_message": null
+      },
+      "score": null,
+      "rank": null,
+      "scoring_error": null
+    },
+    {
+      "source_file": "08_hidden_white_text.pdf",
+      "candidate": {
+        "name": "Nina Patel",
+        "email": "nina.patel@example.com",
+        "github_url": null,
+        "skills": [
+          "flask",
+          "python"
+        ],
+        "projects": [
+          {
+            "name": "Basic Web App",
+            "description": "Python, Flask Built a small Flask web app for tracking tasks.",
+            "technologies": [
+              "flask",
+              "python"
+            ],
+            "evidence": [
+              {
+                "category": "python",
+                "term": "python",
+                "snippet": "Basic Web App | Python, Flask",
+                "source": "resume_text"
+              },
+              {
+                "category": "python",
+                "term": "flask",
+                "snippet": "Basic Web App | Python, Flask",
+                "source": "resume_text"
+              }
+            ]
+          }
+        ],
+        "raw_text_length": 143
+      },
+      "integrity": {
+        "flags": [
+          "white_or_near_background_text"
+        ],
+        "suspicious_span_count": 1,
+        "total_span_count": 8,
+        "details": [
+          "[white_or_near_background_text] 'LLM RAG LangChain agentic fine-tuning vector database retrieval augmented genera'"
+        ],
+        "is_clean": false
+      },
+      "eligibility": {
+        "eligible": false,
+        "python_evidence": [
+          {
+            "category": "python",
+            "term": "python",
+            "snippet": "Python, Flask",
+            "source": "resume_text"
+          },
+          {
+            "category": "python",
+            "term": "flask",
+            "snippet": "Python, Flask",
+            "source": "resume_text"
+          }
+        ],
+        "ai_evidence": [],
+        "rejection_reasons": [
+          "No meaningful AI/LLM/RAG/agentic evidence found -- generic words like 'AI' or 'machine learning' alone don't qualify; a specific technology or implementation (LLM, RAG, agent, LangChain, vector database, fine-tuning, etc.) is required."
+        ]
+      },
+      "github": {
+        "status": "no_url",
+        "username": null,
+        "public_repos": null,
+        "followers": null,
+        "account_created_at": null,
+        "top_repos": [],
+        "error_message": null
+      },
+      "score": null,
+      "rank": null,
+      "scoring_error": null
+    }
+  ],
+  "failures": [
+    {
+      "source_file": "09_corrupt.pdf",
+      "stage": "pipeline",
+      "error": "Failed to open file 'resumes/09_corrupt.pdf' as type pdf."
+    },
+    {
+      "source_file": "10_empty.pdf",
+      "stage": "pipeline",
+      "error": "Cannot open empty file: filename='resumes/10_empty.pdf'."
+    }
+  ]
+}
