@@ -15,6 +15,14 @@ class Settings(BaseSettings):
     gemini_api_key: str | None = None
     gemini_model: str = "gemini-2.5-flash"
     gemini_timeout_seconds: float = 30.0
+    # Thinking tokens before answering. 0 = off (much faster); negative = model default.
+    gemini_thinking_budget: int = 0
+    # Extra attempts when Gemini is rate-limited or overloaded (429/503).
+    gemini_max_retries: int = 2
+
+    # Candidates whose GitHub lookup and scoring run at the same time. Keep it
+    # modest: Gemini's free tier allows only a few requests per minute.
+    max_workers: int = 4
 
     log_level: str = "INFO"
 
