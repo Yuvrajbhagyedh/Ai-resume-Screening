@@ -24,6 +24,7 @@ from pathlib import Path
 from typing import Literal
 
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
+from fastapi.concurrency import run_in_threadpool
 from fastapi.middleware.cors import CORSMiddleware
 
 from resume_screener.api.matching import build_requirements_match
@@ -175,7 +176,11 @@ async def screen_candidates(
                 if jd_clean_text and jd_clean_text.strip():
                     job_description_text_final = jd_clean_text
 
-        report = run_pipeline(
+        # run_pipeline blocks (PDF parsing, GitHub, Gemini). Called directly
+        # inside this async endpoint it froze the whole server -- including
+        # /api/health -- for the length of the batch.
+        report = await run_in_threadpool(
+            run_pipeline,
             tmpdir,
             settings=settings,
             scorer=scorer_instance,
@@ -192,7 +197,11 @@ async def screen_candidates(
         preferred = _parse_skill_list(preferred_skills)
 
         def _to_out(result: ScreeningResult) -> ScreeningResultOut:
-            candidate_text = _read_clean_text(tmpdir / result.source_file)
+            # Reuse the text the pipeline already extracted; parse again only
+            # as a fallback.
+            candidate_text = result._clean_text
+            if candidate_text is None:
+                candidate_text = _read_clean_text(tmpdir / result.source_file)
             match = build_requirements_match(
                 candidate_skills=result.candidate.skills,
                 candidate_text=candidate_text,

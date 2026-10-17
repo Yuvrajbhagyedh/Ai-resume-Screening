@@ -32,6 +32,8 @@ from __future__ import annotations
 
 import json
 import logging
+import threading
+import time
 
 from pydantic import BaseModel, Field, ValidationError
 
@@ -251,26 +253,63 @@ class GeminiScorer:
         self._api_key = settings.gemini_api_key
         self._model = settings.gemini_model
         self._timeout_seconds = settings.gemini_timeout_seconds
+        # gemini-2.5-flash "thinks" before answering by default, which costs
+        # several seconds per candidate. Scoring structured evidence against a
+        # rubric doesn't need it, so the default budget is 0 (off).
+        self._thinking_budget = settings.gemini_thinking_budget
+        self._max_retries = max(0, settings.gemini_max_retries)
+        self._client = None
+        self._client_lock = threading.Lock()
+        self._use_thinking_config = self._thinking_budget >= 0
+
+    def _get_client(self):
+        # One client per scorer: it is thread-safe and reuses connections, so
+        # concurrent candidates don't each pay for a new TLS handshake.
+        if self._client is None:
+            with self._client_lock:
+                if self._client is None:
+                    from google import genai  # local import: optional dependency
+                    from google.genai import types
+
+                    self._client = genai.Client(
+                        api_key=self._api_key,
+                        http_options=types.HttpOptions(timeout=int(self._timeout_seconds * 1000)),
+                    )
+        return self._client
+
+    def _generate(self, prompt: str):
+        from google.genai import types
+
+        config = {"response_mime_type": "application/json", "temperature": 0.0}
+        if self._use_thinking_config:
+            config["thinking_config"] = types.ThinkingConfig(thinking_budget=self._thinking_budget)
+        return self._get_client().models.generate_content(
+            model=self._model,
+            contents=prompt,
+            config=types.GenerateContentConfig(**config),
+        )
 
     def _call_gemini(self, prompt: str) -> str:
         """Isolated in its own method so tests can mock this instead of the
         network -- everything else here is pure parsing/validation logic
         exercised directly, with no Gemini SDK or API access required."""
-        from google import genai  # local import: optional dependency
-        from google.genai import types
-
-        client = genai.Client(
-            api_key=self._api_key,
-            http_options=types.HttpOptions(timeout=int(self._timeout_seconds * 1000)),
-        )
-        response = client.models.generate_content(
-            model=self._model,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-                temperature=0.0,
-            ),
-        )
+        attempt = 0
+        while True:
+            try:
+                response = self._generate(prompt)
+                break
+            except Exception as exc:  # noqa: BLE001 -- classified below
+                message = str(exc).lower()
+                if self._use_thinking_config and "thinking" in message:
+                    # This model doesn't accept a thinking budget; retry without it.
+                    self._use_thinking_config = False
+                    continue
+                busy = any(t in message for t in ("429", "503", "resource_exhausted", "unavailable"))
+                if not busy or attempt >= self._max_retries:
+                    raise
+                attempt += 1
+                logger.warning("Gemini busy; retrying (attempt %d): %s", attempt, exc)
+                time.sleep(2.0 * attempt)
         if not response.text:
             raise GeminiScoringError("Gemini returned an empty response")
         return response.text
