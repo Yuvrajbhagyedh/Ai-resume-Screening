@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Literal
 
-from pydantic import BaseModel, Field, computed_field
+from pydantic import BaseModel, Field, PrivateAttr, computed_field
 
 FileKind = Literal["pdf", "docx", "txt"]
 
@@ -133,6 +133,9 @@ class ScreeningResult(BaseModel):
     github: GitHubEnrichment
     score: ScoreBreakdown | None = None
     rank: int | None = None
+    # Integrity-filtered resume text, kept in memory so the API can reuse it
+    # instead of parsing the PDF a second time. Private: never serialized.
+    _clean_text: str | None = PrivateAttr(default=None)
     scoring_error: str | None = Field(
         default=None,
         description=(

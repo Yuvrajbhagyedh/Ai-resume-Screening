@@ -8,6 +8,8 @@ error, timeout, malformed URL -- is caught here and mapped to a `status` on
 from __future__ import annotations
 
 import logging
+import threading
+import time
 
 import httpx
 
@@ -24,7 +26,31 @@ def _extract_username(github_url: str) -> str | None:
     return parts[-1] if parts and parts[-1] else None
 
 
+# username -> (fetched_at, result). An hour keeps a long-running API server
+# from serving stale profiles while still covering a whole batch.
+_CACHE_TTL_SECONDS = 3600.0
+_cache: dict[str, tuple[float, GitHubEnrichment]] = {}
+_cache_lock = threading.Lock()
+
+
 def enrich(github_url: str | None, settings: Settings) -> GitHubEnrichment:
+    """Look up a profile, reusing a successful result for the same username
+    (the same candidate is often submitted twice, and unauthenticated GitHub
+    allows only 60 requests an hour)."""
+    username = _extract_username(github_url) if github_url else None
+    if username and settings.github_enrichment_enabled:
+        with _cache_lock:
+            entry = _cache.get(username.lower())
+        if entry is not None and time.monotonic() - entry[0] < _CACHE_TTL_SECONDS:
+            return entry[1].model_copy(deep=True)
+    result = _enrich_uncached(github_url, settings)
+    if result.status == "ok" and result.username:
+        with _cache_lock:
+            _cache[result.username.lower()] = (time.monotonic(), result)
+    return result
+
+
+def _enrich_uncached(github_url: str | None, settings: Settings) -> GitHubEnrichment:
     if not github_url:
         return GitHubEnrichment(status="no_url")
     if not settings.github_enrichment_enabled:
